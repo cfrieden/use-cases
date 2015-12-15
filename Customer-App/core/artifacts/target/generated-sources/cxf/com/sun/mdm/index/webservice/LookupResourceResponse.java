@@ -39,7 +39,7 @@ public class LookupResourceResponse
 {
 
     private final static long serialVersionUID = 12343L;
-    @XmlElementRef(name = "return", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "return", type = JAXBElement.class)
     protected JAXBElement<byte[]> _return;
 
     /**
@@ -63,7 +63,7 @@ public class LookupResourceResponse
      *     
      */
     public void setReturn(JAXBElement<byte[]> value) {
-        this._return = value;
+        this._return = ((JAXBElement<byte[]> ) value);
     }
 
     public boolean isSetReturn() {
