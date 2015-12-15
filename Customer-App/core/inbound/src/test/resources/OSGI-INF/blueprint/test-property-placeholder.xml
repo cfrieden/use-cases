@@ -9,7 +9,8 @@
 
 	<cm:property-placeholder id="config.whatever" persistent-id="com.app.deim.inbound">
 		<cm:default-properties>
-			<cm:property name="deim.rest.service.uri" value="http://localhost:8181/cxf/deim/add"/>
+			<cm:property name="deim.rest.service.uri" value="http://localhost:8181/"/>
+			<cm:property name="activeMqBrokeradress" value="tcp://127.0.0.1:61616"/>
 		</cm:default-properties>
 		</cm:property-placeholder>
 

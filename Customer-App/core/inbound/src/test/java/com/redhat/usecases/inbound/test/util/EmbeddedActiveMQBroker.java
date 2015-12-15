@@ -22,7 +22,7 @@ public class EmbeddedActiveMQBroker extends ExternalResource {
 	public EmbeddedActiveMQBroker(String brokerId) {
 		Validate.notEmpty(brokerId, "brokerId is empty");
 		this.brokerId = brokerId;
-		tcpConnectorUri = "tcp://localhost:" + AvailablePortFinder.getNextAvailable();
+		tcpConnectorUri = "tcp://localhost:" + AvailablePortFinder.getNextAvailable(61616);
 
 		brokerService = new BrokerService();
 		brokerService.setBrokerId(brokerId);

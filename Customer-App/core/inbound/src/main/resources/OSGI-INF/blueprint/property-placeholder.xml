@@ -12,6 +12,7 @@
 		xmlns="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0">
 		<default-properties>
 			<property name="deim.rest.service.uri" value="/empi-service"/>
+			<property name="activeMqBrokeradress" value="tcp://127.0.0.1:61616"/>
 		</default-properties>
 		</cm:property-placeholder>
 
