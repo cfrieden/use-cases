@@ -26,7 +26,7 @@ public class DEIMServiceTest extends ExtendedBlueprintTestSupport {
 		getMockEndpoint("mock:end").expectedMinimumMessageCount(1);
 
 		httpClient = HttpClientBuilder.create().build();
-		HttpPost postRequest = new HttpPost("http://localhost:8181/deim/add");
+		HttpPost postRequest = new HttpPost("http://localhost:8187/deim/add");
 		StringEntity input = new StringEntity(getSampleMessage("/PatientDemographics.xml"));
 		input.setContentType("application/xml");
 		postRequest.setEntity(input);
@@ -36,7 +36,7 @@ public class DEIMServiceTest extends ExtendedBlueprintTestSupport {
 		Thread.sleep(5000);
 
 		HttpEntity responseEntity = httpResponse.getEntity();
-		logger.debug("Recieved Status line: " + httpResponse.getStatusLine());
+		logger.error("Recieved Status line: " + httpResponse.getStatusLine());
 		assertTrue(httpResponse.getStatusLine().toString().contains("200"));
 
 		getMockEndpoint("mock:end").assertIsSatisfied();

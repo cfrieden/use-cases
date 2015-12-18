@@ -13,6 +13,7 @@
 		<default-properties>
 			<property name="deim.rest.service.uri" value="/empi-service"/>
 			<property name="activeMqBrokeradress" value="tcp://localhost.localdomain:45993"/>
+			<property name="com.customer.soap.endpoint" value="/soap-service"/>
 		</default-properties>
 		</cm:property-placeholder>
 

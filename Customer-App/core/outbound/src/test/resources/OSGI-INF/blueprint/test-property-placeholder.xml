@@ -11,6 +11,8 @@
 		<cm:default-properties>
 			<cm:property name="deim.rest.service.uri" value="http://localhost:8187/"/>
 			<cm:property name="activeMqBrokeradress" value="tcp://127.0.0.1:61619"/>
+			<cm:property name="com.customer.soap.endpoint" value="http://localhost:8189"/>
+			<cm:property name="ws-outbound" value="cxf:bean:soapEndpoint"/>
 		</cm:default-properties>
 		</cm:property-placeholder>
 

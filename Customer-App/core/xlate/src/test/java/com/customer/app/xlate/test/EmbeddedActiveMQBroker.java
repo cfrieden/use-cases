@@ -1,4 +1,4 @@
-package com.redhat.usecases.inbound.test.util;
+package com.customer.app.xlate.test;
 
 import org.apache.activemq.broker.BrokerService;
 import org.apache.activemq.store.memory.MemoryPersistenceAdapter;

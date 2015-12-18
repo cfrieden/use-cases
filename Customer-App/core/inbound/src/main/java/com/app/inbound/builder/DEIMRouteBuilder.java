@@ -20,7 +20,7 @@ public class DEIMRouteBuilder extends RouteBuilder {
 		from("direct:test").log(LoggingLevel.ERROR, "hello everybody");
 
 		from("direct:deimInboud").log(LoggingLevel.INFO, "recived person object").marshal(jaxb)
-				.to(ExchangePattern.InOnly, "mq:q.empi.deim.in").transform().constant("done");
+				.to(ExchangePattern.InOnly, "mq:q.empi.deim.in").log("${body}").transform().constant("done");
 		from("mq:q.empi.deim.in").to("mock:end");
 	}
 
